@@ -1,4 +1,6 @@
 # coding=utf-8
+# require python-twitter 0.7-devel
+# see http://code.google.com/p/python-twitter/
 import os, time
 import twitter
 
@@ -39,7 +41,7 @@ def write_howm(dir, s):
     except OSError:
         None
     f = open(dirname + '/' + filename, 'w')
-    # euc-jp で出力する
+    # utf-8 で出力する
     print >>f, '= tw:' + howm_time + '. ' + s.text.encode('utf-8')
     f.close()
 
