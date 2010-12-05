@@ -1,0 +1,22 @@
+twitter2howm
+
+twitter上のつぶやきをhowm形式で保存します。
+本文と時刻のみ取得します。
+
+python-twitter 0.7-devel以降が必要です。
+python-twitterのsvn版をインストールします。
+svn checkout http://python-twitter.googlecode.com/svn/trunk/ python-twitter
+cd python-twitter
+python setup.py build
+sudo python setup.py install
+
+■実行
+python twitter.py
+
+
+python-twitterのインストールで
+NameError: global name 'log' is not defined
+のようなエラーになる場合は
+次のような手順でsetuptoolsをアップグレードします
+curl -o ez_setup.py http://peak.telecommunity.com/dist/ez_setup.py 
+sudo python ez_setup.py
